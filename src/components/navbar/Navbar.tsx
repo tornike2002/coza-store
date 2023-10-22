@@ -1,11 +1,21 @@
-import { Fragment } from "react";
+import { Fragment, useState } from "react";
 import NavLogo from "../../assets/navbar/logo.png";
 import { Link } from "react-router-dom";
-import { ShoppingFilled, HeartFilled } from "@ant-design/icons";
+import {
+  ShoppingFilled,
+  HeartFilled,
+  BarsOutlined,
+  CloseOutlined,
+} from "@ant-design/icons";
+import Burgermenu from "../burgermenu/Burgermenu";
 const Navbar: React.FC = () => {
+  const [burger, setBurger] = useState<boolean>(false);
+  const BurgerMenuHandler = () => {
+    setBurger((value) => !value);
+  };
   return (
     <Fragment>
-      <div className="container pt-5">
+      <div className="container py-5">
         <div className="flex items-center px-5 2xl:px-0">
           <div>
             <img src={NavLogo} alt="NavLogo" />
@@ -56,13 +66,31 @@ const Navbar: React.FC = () => {
               </Link>
             </div>
             <div className="flex gap-5 text-sm md:text-xl">
-              <ShoppingFilled className="text-gray-500 
-              hover:text-navlinksHover transition-all duration-500 ease cursor-pointer" />
-              <HeartFilled className="text-red-400 cursor-pointer
-               hover:text-navlinksHover transition-all duration-500 ease" />
+              <ShoppingFilled
+                className="text-gray-500 
+              hover:text-navlinksHover transition-all duration-500 ease cursor-pointer"
+              />
+              <HeartFilled
+                className="text-red-400 cursor-pointer
+               hover:text-navlinksHover transition-all duration-500 ease"
+              />
+              {!burger ? (
+                <BarsOutlined
+                  onClick={BurgerMenuHandler}
+                  className="md:hidden text-navlinks
+              hover:text-navlinksHover transition-all duration-500 ease cursor-pointer"
+                />
+              ) : (
+                <CloseOutlined
+                  onClick={BurgerMenuHandler}
+                  className="md:hidden text-navlinks
+                hover:text-navlinksHover transition-all duration-500 ease cursor-pointer"
+                />
+              )}
             </div>
           </div>
         </div>
+        <div className="bg-burger px-5 2xl:px-0">{burger && <Burgermenu />}</div>
       </div>
     </Fragment>
   );

@@ -17,6 +17,9 @@ export default {
         navlinksHover: "#8994DE",
         navlinks: "#333",
       },
+      backgroundColor: {
+        burger: "#717FE0",
+      },
       fontFamily: {
         Poppins: ["Poppins", "sans-serif"],
       },
