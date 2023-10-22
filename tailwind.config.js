@@ -22,6 +22,7 @@ export default {
       },
       fontFamily: {
         Poppins: ["Poppins", "sans-serif"],
+        Playfair: ["Playfair Display SC", "serif"],
       },
     },
   },
