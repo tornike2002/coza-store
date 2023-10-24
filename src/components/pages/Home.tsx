@@ -4,6 +4,7 @@ import HomeSlider from "./homeslider/HomeSlider";
 import banner1 from "../../assets/banner/banner-01.jpg";
 import banner2 from "../../assets/banner/banner-02.jpg";
 import banner3 from "../../assets/banner/banner-03.jpg";
+import Filters from "./filters/Filters";
 
 type BannerData = {
   Bimage: string;
@@ -45,6 +46,7 @@ const Home: React.FC = () => {
           </div>
         ))}
       </div>
+      <Filters />
     </div>
   );
 };
