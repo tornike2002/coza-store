@@ -2,7 +2,7 @@ import { Fragment } from "react";
 const Filters: React.FC = () => {
   return (
     <Fragment>
-      <div className="container flex items-center gap-5 py-5 text-navlinks">
+      <div className="container flex items-center justify-center py-5  text-navlinks flex-wrap gap-5">
         <button
           type="button"
           className="hover:border-b font-Poppins text-sm
