@@ -16,6 +16,7 @@ export default {
       colors: {
         navlinksHover: "#8994DE",
         navlinks: "#333",
+        productName: "#00000073"
       },
       backgroundColor: {
         burger: "#717FE0",

@@ -5,6 +5,7 @@ import banner1 from "../../assets/banner/banner-01.jpg";
 import banner2 from "../../assets/banner/banner-02.jpg";
 import banner3 from "../../assets/banner/banner-03.jpg";
 import Filters from "./filters/Filters";
+import HomeProducts from "./homeProducts/HomeProducts";
 
 type BannerData = {
   Bimage: string;
@@ -35,7 +36,7 @@ const Home: React.FC = () => {
     <div>
       <Navbar />
       <HomeSlider />
-      <div className="flex container itemscenter justify-around">
+      <div className="flex container itemscenter justify-around flex-wrap">
         {DUMMY_BANNER.map((values) => (
           <div key={values.Btitle}>
             <Banners
@@ -47,6 +48,7 @@ const Home: React.FC = () => {
         ))}
       </div>
       <Filters />
+      <HomeProducts />
     </div>
   );
 };
