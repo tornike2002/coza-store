@@ -1,3 +1,4 @@
+import React from "react";
 import Navbar from "../navbar/Navbar";
 import Banners from "./banners/Banners";
 import HomeSlider from "./homeslider/HomeSlider";
@@ -34,6 +35,7 @@ const DUMMY_BANNER: BannerData[] = [
 const Home: React.FC = () => {
   return (
     <div>
+      <h1>hello</h1>
       <Navbar />
       <HomeSlider />
       <div className="flex container itemscenter justify-around flex-wrap">
